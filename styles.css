@@ -19,6 +19,11 @@
   --radius-md: 18px;
   --content: 1220px;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-display: "ZCOOL XiaoWei", "Noto Serif SC", "Songti SC", serif;
+  --font-cute: "ZCOOL KuaiLe", "Noto Sans SC", cursive;
+  --font-note: "Ma Shan Zheng", cursive;
 }
 
 * {
@@ -37,7 +42,7 @@ body {
     radial-gradient(circle at 15% 0%, rgba(255, 224, 138, 0.42), transparent 26%),
     radial-gradient(circle at 100% 15%, rgba(243, 199, 66, 0.18), transparent 24%),
     linear-gradient(180deg, #fffdf3 0%, #fff7dd 100%);
-  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--font-body);
 }
 
 body.nav-open {
@@ -150,7 +155,7 @@ textarea {
   display: grid;
   place-items: center;
   color: var(--shell);
-  font-family: "Noto Serif SC", "Songti SC", serif;
+  font-family: var(--font-display);
   font-size: 1rem;
   background: linear-gradient(135deg, #33250f 0%, #6f531c 100%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
@@ -271,7 +276,7 @@ textarea {
 .update-panel h2 {
   margin: 0;
   color: var(--ink);
-  font-family: "Noto Serif SC", "Songti SC", serif;
+  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.08;
@@ -555,7 +560,7 @@ textarea {
 .poster-note h3,
 .club-card h3 {
   margin: 14px 0 10px;
-  font-family: "Noto Serif SC", "Songti SC", serif;
+  font-family: var(--font-display);
   font-size: clamp(1.4rem, 2vw, 2rem);
   line-height: 1.35;
 }
@@ -609,7 +614,7 @@ textarea {
 
 .hero-strip-card h3 {
   margin: 12px 0 8px;
-  font-family: "Noto Serif SC", "Songti SC", serif;
+  font-family: var(--font-display);
   font-size: 1.36rem;
 }
 
@@ -979,4 +984,71 @@ textarea {
   .gallery-large {
     min-height: 360px;
   }
+}
+
+
+.brand-copy strong {
+  font-family: var(--font-cute);
+  font-size: 1.02rem;
+  letter-spacing: 0.04em;
+}
+
+.brand-copy em {
+  font-family: var(--font-note);
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.hero-fan h1,
+.page-intro h1,
+.section-heading h2,
+.club-copy h2,
+.update-panel h2,
+.gallery-copy h3,
+.memory-card h3,
+.card-soft h3,
+.poster-note h3,
+.club-card h3,
+.hero-strip-card h3 {
+  font-family: var(--font-display);
+}
+
+.eyebrow,
+.mini-label,
+.floating-badge {
+  font-family: var(--font-note);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.fan-tags span,
+.button.primary,
+.button.secondary,
+.site-nav a,
+.ghost-link,
+.photo-card-meta strong {
+  font-family: var(--font-cute);
+}
+
+.hero-strip-card h3,
+.gallery-copy h3,
+.memory-card h3,
+.card-soft h3,
+.poster-note h3,
+.club-card h3 {
+  line-height: 1.42;
+}
+
+.button {
+  letter-spacing: 0.02em;
+}
+
+.site-nav a,
+.ghost-link {
+  font-size: 0.98rem;
+}
+
+.fan-tags span {
+  font-size: 0.84rem;
 }
