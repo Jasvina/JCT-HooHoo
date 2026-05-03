@@ -1052,3 +1052,51 @@ textarea {
 .fan-tags span {
   font-size: 0.84rem;
 }
+
+
+.fan-polaroids {
+  display: grid;
+  grid-template-columns: 0.82fr 0.82fr 1.16fr;
+  gap: 18px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.polaroid-card {
+  padding: 14px 14px 20px;
+  border-radius: 8px 8px 24px 24px;
+  background: #fffefb;
+  border: 1px solid rgba(119, 90, 18, 0.14);
+  box-shadow: 0 18px 40px rgba(94, 69, 34, 0.12);
+}
+
+.polaroid-card img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.polaroid-note {
+  padding-top: 14px;
+  color: var(--wine);
+  font-family: var(--font-note);
+  font-size: 1.1rem;
+}
+
+.offset-card {
+  margin-top: 34px;
+}
+
+.polaroid-copy {
+  min-height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .fan-polaroids {
+    grid-template-columns: 1fr;
+  }
+
+  .offset-card {
+    margin-top: 0;
+  }
+}
