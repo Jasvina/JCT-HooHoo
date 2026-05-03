@@ -26,3 +26,11 @@ This repo includes `.github/workflows/deploy-pages.yml` for GitHub Pages deploym
 - upgrade to Next.js for reusable layouts and richer routing
 - connect Supabase for forms, auth, storage, and content updates
 - replace placeholder modules with real imagery, copy, and project data
+
+
+## Photo credit
+
+Current photos in `assets/images/` are from Wikimedia Commons and should retain attribution when published:
+
+- `tan-jianci-smile.jpg` - China News Service / 中国新闻社, via Wikimedia Commons, CC BY 3.0
+- `tan-jianci-racket.jpg` - China News Service / 中国新闻社, via Wikimedia Commons, CC BY 3.0

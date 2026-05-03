@@ -3,29 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>粉丝俱乐部 | 檀健次</title>
-    <meta
-      name="description"
-      content="非官方概念站中的粉丝俱乐部页面：预约上线、活动报名和未来互动功能的前端原型。"
-    />
-    <meta name="theme-color" content="#0b0f17" />
+    <title>小炭火入口 | 檀健次</title>
+    <meta name="description" content="檀健次粉丝向概念站中的小炭火页面：更温暖的互动入口、留言方向和活动模块原型。" />
+    <meta name="theme-color" content="#f6efe5" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-page="club">
-    <div class="site-bg"></div>
-    <header class="site-header">
+    <div class="site-bg fan-bg"></div>
+    <header class="site-header fan-header">
       <a class="brand" href="index.html" aria-label="返回首页">
-        <span class="brand-mark">T</span>
+        <span class="brand-mark">炭</span>
         <span class="brand-copy">
           <strong>檀健次</strong>
-          <em>Aurora Stage</em>
+          <em>黄海小炭火</em>
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">
@@ -35,73 +29,59 @@
       <nav class="site-nav" aria-label="主导航">
         <a href="index.html">首页</a>
         <a href="works.html">作品宇宙</a>
-        <a href="stage.html">舞台叙事</a>
-        <a href="club.html" aria-current="page">粉丝俱乐部</a>
+        <a href="stage.html">舞台高光</a>
+        <a href="club.html" aria-current="page">小炭火入口</a>
       </nav>
-      <a class="ghost-link" href="#launch">预约上线</a>
+      <a class="ghost-link fan-link" href="#form">写下你想看的</a>
     </header>
 
     <main class="page-shell">
-      <section class="page-hero panel reveal">
-        <p class="eyebrow">Community Prototype</p>
-        <h1>先把粉丝入口设计优雅，再决定哪些功能真的值得做重后台。</h1>
-        <p class="hero-text narrow">
-          当前是纯前端表单壳层，适合先验证风格和信息组织。未来可接 Supabase 或其他后端，变成真实报名、留言和订阅系统。
-        </p>
+      <section class="club-welcome reveal">
+        <div class="club-copy card-soft">
+          <p class="eyebrow soft-eyebrow">For 小炭火</p>
+          <h2>这一页应该让粉丝觉得“我也能在这里留下点什么”。</h2>
+          <p>所以我把它从“预约上线”改成更像粉丝互动入口：以后适合接留言、活动、投票和内容征集。</p>
+          <ul class="club-list">
+            <li>你最想补的照片类型</li>
+            <li>你最想做的作品档案页</li>
+            <li>你想看的舞台高光主题</li>
+          </ul>
+        </div>
+        <article class="club-card tilt-card">
+          <img src="assets/images/tan-jianci-smile.jpg" alt="檀健次照片" />
+        </article>
       </section>
 
-      <section id="launch" class="form-shell panel reveal">
-        <div class="form-copy">
-          <p class="eyebrow">Launch Queue</p>
-          <h2>预约这个站点的正式版方向。</h2>
-          <p>
-            你后续如果想做成真实站点，这里可以接入邮件订阅、活动报名、留言、会员内容解锁等功能。
-          </p>
+      <section id="form" class="form-shell reveal">
+        <div class="update-panel">
+          <span class="mini-label">留言方向示意</span>
+          <h2>先把互动界面做温柔，再接真实后端。</h2>
+          <p>你刚才的反馈非常对：粉丝站的交互不需要像产品后台，更需要像“愿意留下来写一句话”的地方。</p>
         </div>
         <form class="prototype-form">
           <label>
             <span>你的昵称</span>
-            <input type="text" placeholder="例如：想看舞台页先上线" />
+            <input type="text" placeholder="例如：今天也在补舞台的炭火" />
           </label>
           <label>
-            <span>你最期待的模块</span>
+            <span>你最想先补哪一块</span>
             <select>
-              <option>作品档案页</option>
-              <option>舞台视觉页</option>
-              <option>活动报名</option>
-              <option>内容更新订阅</option>
+              <option>照片图册</option>
+              <option>作品档案</option>
+              <option>舞台高光页</option>
+              <option>留言互动区</option>
             </select>
           </label>
           <label class="full-span">
-            <span>你希望保留的风格关键词</span>
-            <textarea rows="5" placeholder="例如：高级、克制、电影感、冷色灯光、舞台感、不要太花"></textarea>
+            <span>你想对这个站提什么要求</span>
+            <textarea rows="5" placeholder="例如：希望更像收藏夹、少一点冷感、照片再多一些、舞台页更亮一些"></textarea>
           </label>
-          <button class="button primary" type="button">提交概念偏好</button>
+          <button class="button primary" type="button">提交你的小炭火愿望单</button>
         </form>
-      </section>
-
-      <section class="stack-grid reveal">
-        <article class="glass-card accent-gold">
-          <span class="card-index">A</span>
-          <h3>轻交互版本</h3>
-          <p>只有预约和订阅，几乎不需要复杂后端，最快能上线。</p>
-        </article>
-        <article class="glass-card accent-teal">
-          <span class="card-index">B</span>
-          <h3>社区增强版本</h3>
-          <p>支持活动表单、媒体投稿、留言墙，适合接 Supabase。</p>
-        </article>
-        <article class="glass-card accent-rose">
-          <span class="card-index">C</span>
-          <h3>完整运营版本</h3>
-          <p>支持后台发布、会员权益、内容管理和活动数据库。</p>
-        </article>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>粉丝页目前是前端原型；接后端后即可变为真实互动页面。</p>
-    </footer>
+    <footer class="site-footer"><p>小炭火页当前已经切到黄色应援氛围，后续接后端后可以变成真实留言/活动页面。</p></footer>
     <script src="script.js"></script>
   </body>
 </html>

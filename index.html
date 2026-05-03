@@ -3,29 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>檀健次 | Aurora Stage</title>
+    <title>檀健次 | 小炭火收藏夹</title>
     <meta
       name="description"
-      content="非官方概念站首页原型：为檀健次主题网站设计的高质感前端首页，包含作品入口、舞台叙事和未来上线方案。"
+      content="给��健次粉丝小炭火的非官方前端概念站：首页以照片、围绕小炭火黄色应援氛围、照片驱动排版和轻盈动画来重做。"
     />
-    <meta name="theme-color" content="#0b0f17" />
+    <meta name="theme-color" content="#0f1730" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-page="home">
-    <div class="site-bg"></div>
-    <header class="site-header">
+    <div class="site-bg fan-bg"></div>
+    <div class="spark spark-a"></div>
+    <div class="spark spark-b"></div>
+    <div class="spark spark-c"></div>
+
+    <header class="site-header fan-header">
       <a class="brand" href="index.html" aria-label="返回首页">
-        <span class="brand-mark">T</span>
+        <span class="brand-mark">炭</span>
         <span class="brand-copy">
           <strong>檀健次</strong>
-          <em>Aurora Stage</em>
+          <em>黄海小炭火</em>
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">
@@ -35,139 +39,143 @@
       <nav class="site-nav" aria-label="主导航">
         <a href="index.html" aria-current="page">首页</a>
         <a href="works.html">作品宇宙</a>
-        <a href="stage.html">舞台叙事</a>
-        <a href="club.html">粉丝俱乐部</a>
+        <a href="stage.html">舞台高光</a>
+        <a href="club.html">小炭火入口</a>
       </nav>
-      <a class="ghost-link" href="club.html#launch">预约上线</a>
+      <a class="ghost-link fan-link" href="#gallery">看照片</a>
     </header>
 
-    <main class="page-shell">
-      <section class="hero panel reveal">
-        <div class="hero-copy">
-          <p class="eyebrow">Unofficial Concept Website</p>
+    <main class="page-shell home-shell">
+      <section class="hero-fan reveal">
+        <div class="hero-main">
+          <p class="eyebrow soft-eyebrow">Unofficial Fan-made Frontend</p>
           <h1>
-            不是普通明星主页，<br />
-            而是一座会呼吸的<br />
-            舞台档案馆。
+            给小炭火的，<br />
+            应该是一页被黄色灯海照亮、<br />
+            让人想立刻截图收藏的首页。
           </h1>
-          <p class="hero-text">
-            这是一版非官方概念站前端原型：用深夜剧场、电影海报和金属高光做出“冷静、克制、锋利但有爆发力”的气质，也为后续真正上线的完整网站留出结构。
+          <p class="hero-text fan-copy">
+            这一版我把方向改成“照片优先、收藏感排版、轻盈发光动画”：不是冷冰冰的概念稿，而是更像一张能让粉丝停下来反复看的电子应援册封面。
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="works.html">进入作品宇宙</a>
-            <a class="button secondary" href="#blueprint">查看上线方案</a>
+            <a class="button primary" href="#gallery">先看照片区</a>
+            <a class="button secondary" href="club.html">进入小炭火入口</a>
           </div>
-          <p class="micro-note">当前版本：纯前端静态站，可直接部署；后续可扩为 Next.js + Supabase。</p>
+          <div class="fan-tags" aria-label="站点关键词">
+            <span>温柔发光</span>
+            <span>收藏感排版</span>
+            <span>照片优先</span>
+            <span>黄色灯海氛围</span>
+          </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="orb orb-gold"></div>
-          <div class="orb orb-teal"></div>
-          <div class="portrait-frame">
-            <div class="portrait-shine"></div>
-            <div class="portrait-core">
-              <span class="portrait-kicker">TJC</span>
-              <span class="portrait-title">A Stage of Precision</span>
+
+        <div class="hero-photo-stack" aria-label="檀健次照片展示">
+          <article class="photo-card photo-card-main tilt-card">
+            <img
+              src="assets/images/tan-jianci-smile.jpg"
+              alt="檀健次照片，蓝色背景下微笑看向镜头"
+            />
+            <div class="photo-card-meta">
+              <span>2023 / Bright Frame</span>
+              <strong>笑起来的时候，整片黄海都该一起亮起来。</strong>
             </div>
-          </div>
-          <div class="floating-note top-note">
-            <span>Editorial Layout</span>
-            <strong>深色戏剧质感</strong>
-          </div>
-          <div class="floating-note bottom-note">
-            <span>Launch-ready</span>
-            <strong>可继续扩成正式站点</strong>
-          </div>
+          </article>
+          <article class="photo-card photo-card-side tilt-card">
+            <img
+              src="assets/images/tan-jianci-racket.jpg"
+              alt="檀健次照片，侧持球拍凝视镜头"
+            />
+          </article>
+          <div class="floating-badge badge-top">小炭火收藏夹</div>
+          <div class="floating-badge badge-bottom">Photo-led redesign</div>
         </div>
       </section>
 
-      <section class="overview reveal">
-        <div class="section-heading split-heading">
+      <section class="ticker-band reveal" aria-label="滚动文案">
+        <div class="ticker-track">
+          <span>檀健次 · 小炭火 · 收藏感首页 · 照片优先 · 更轻盈的动画 · 更柔和但不廉价的发光感 · 适合继续做应援站</span>
+          <span>檀健次 · 小炭火 · 收藏感首页 · 照片优先 · 更轻盈的动画 · 更柔和但不廉价的发光感 · 适合继续做应援站</span>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery-showcase reveal">
+        <div class="section-heading split-heading fan-heading">
           <div>
-            <p class="eyebrow">Site Direction</p>
-            <h2>先把气质做准，再决定系统厚度。</h2>
+            <p class="eyebrow soft-eyebrow">Photo Gallery</p>
+            <h2>先让照片成为情绪中心，而不是被一堆卡片淹没。</h2>
           </div>
-          <p class="section-text">
-            这个版本不是在堆功能，而是在先把视觉叙事、内容结构和未来可扩展路线搭起来：现在能看，后面也能长。
+          <p class="section-text fan-copy">
+            首页应该先抓住“想保存、想转发、想继续往下看”的感觉，所以我把核心信息让位给照片、留白和更舒服的光感。
           </p>
         </div>
-        <div class="stack-grid">
-          <article class="glass-card accent-gold">
-            <span class="card-index">01</span>
-            <h3>影像感首页</h3>
-            <p>首屏像一张会移动的海报，主张不是“资讯”，而是“记忆点”。</p>
+
+        <div class="gallery-grid">
+          <article class="gallery-large tilt-card">
+            <img
+              src="assets/images/tan-jianci-smile.jpg"
+              alt="檀健次近景微笑照片"
+            />
           </article>
-          <article class="glass-card accent-teal">
-            <span class="card-index">02</span>
-            <h3>作品即章节</h3>
-            <p>影视、舞台、音乐和采访可拆成独立内容页，未来很适合接 CMS。</p>
+          <article class="gallery-copy card-soft">
+            <span class="mini-label">为什么这一版更像粉丝站</span>
+            <h3>把“喜欢的人”放在页面最前面，而不是把设计概念放最前面。</h3>
+            <p>
+              你说得对，之前那版太冷、太像模板提案。现在这版会更像电子收藏页：照片先出现，文案变短，氛围更柔和，动画只做“烘托”而不是抢镜。
+            </p>
           </article>
-          <article class="glass-card accent-rose">
-            <span class="card-index">03</span>
-            <h3>互动有节奏地加</h3>
-            <p>留言、报名、会员内容、活动通知都能逐步接入，不用一开始做重后台。</p>
+          <article class="gallery-small tilt-card">
+            <img
+              src="assets/images/tan-jianci-racket.jpg"
+              alt="檀健次持球拍照片"
+            />
+          </article>
+          <article class="gallery-note card-soft accent-shell">
+            <span class="mini-label">更适合继续补的模块</span>
+            <ul>
+              <li>更多授权照片做成九宫格/长图册</li>
+              <li>作品页改为海报墙式布局</li>
+              <li>舞台页加更细的光带和滚动章节</li>
+              <li>小炭火页接留言或活动报名</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section class="entry-grid reveal">
-        <a class="entry-card entry-large" href="works.html">
-          <span class="entry-tag">Works</span>
-          <h3>作品宇宙</h3>
-          <p>把角色、舞台、音乐与影像都做成可展开的内容章节。</p>
-        </a>
-        <a class="entry-card" href="stage.html">
-          <span class="entry-tag">Stage</span>
-          <h3>舞台叙事</h3>
-          <p>滚动式镜头感页面、灯光切换、章节推进。</p>
-        </a>
-        <a class="entry-card" href="club.html">
-          <span class="entry-tag">Club</span>
-          <h3>粉丝俱乐部</h3>
-          <p>活动通知、预约、表单、互动模块的未来入口。</p>
-        </a>
+
+      <section class="update-panel reveal">
+        <span class="mini-label">角色主图说明</span>
+        <h2>谢却山这一组主图我还在继续找，但目前只先用了授权清晰的公开照片。</h2>
+        <p>我查了谢却山相关图片来源，但暂时没找到“能放心直接放进仓库并上线”的明确可复用剧照。为了不把版权风险带进项目，我先用已确认可复用的檀健次照片撑起主视觉，同时把整体风格先改到小炭火黄海这条线上。</p>
+        <p>如果你给我官方剧照文件，或者确认可使用的宣传图链接，我可以下一轮直接把首页主图全部替换成谢却山专题视觉。</p>
       </section>
 
-      <section id="blueprint" class="blueprint panel reveal">
-        <div class="section-heading split-heading">
-          <div>
-            <p class="eyebrow">Launch Blueprint</p>
-            <h2>是否需要租服务器，取决于你想把它做到哪一步。</h2>
-          </div>
-          <p class="section-text">
-            如果只是展示站，这个仓库现在已经足够部署；当你需要账号体系和内容管理时，再引入后端也不晚。
-          </p>
-        </div>
-        <div class="roadmap-grid">
-          <article class="roadmap-card">
-            <h3>阶段 A：静态展示站</h3>
-            <ul>
-              <li>不需要传统 VPS</li>
-              <li>直接部署到 GitHub Pages / Vercel / Cloudflare Pages</li>
-              <li>适合首页、作品页、介绍页、活动页</li>
-            </ul>
-          </article>
-          <article class="roadmap-card">
-            <h3>阶段 B：轻后端增强</h3>
-            <ul>
-              <li>表单提交、活动报名、图片存储、订阅更新</li>
-              <li>推荐 Supabase：Auth、Database、Storage、Functions</li>
-              <li>仍然可以不买独立服务器</li>
-            </ul>
-          </article>
-          <article class="roadmap-card">
-            <h3>阶段 C：完整运营系统</h3>
-            <ul>
-              <li>后台管理、会员体系、内容发布、周边预约</li>
-              <li>这时再评估 Next.js + 专门 API 或云服务</li>
-              <li>复杂业务再考虑独立云服务器</li>
-            </ul>
-          </article>
-        </div>
+      <section class="memory-grid reveal">
+        <article class="memory-card memory-primary card-soft">
+          <span class="mini-label">视觉重做重点</span>
+          <h3>删掉“硬概念”，换成“柔亮、可收藏、会发光”。</h3>
+          <p>标题更像杂志封面，照片像收藏卡，背景像灯光不是像程序界面，整体更适合粉丝站。</p>
+        </article>
+        <article class="memory-card card-soft">
+          <span class="mini-label">动画重做重点</span>
+          <h3>慢一点，轻一点，像呼吸，不像炫技。</h3>
+          <p>我把动画改成漂浮、缓入、跑马灯和照片微倾斜，减少生硬 reveal 和厚重科技感。</p>
+        </article>
+        <article class="memory-card card-soft">
+          <span class="mini-label">接下来可以继续</span>
+          <h3>这只是第一轮审美纠偏。</h3>
+          <p>下一轮我可以继续把作品页和小炭火页一起按这个方向全部重做统一。</p>
+        </article>
+      </section>
+
+      <section class="credit-strip reveal">
+        <p>
+          当前站点主题色已改为小炭火常见的黄色系应援氛围；图像仍使用已确认可复用的 Wikimedia Commons CC BY 3.0 图片。
+        </p>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>JCT-HooHoo / 非官方概念站原型 / Built for visual direction and future expansion.</p>
+    <footer class="site-footer fan-footer">
+      <p>非官方檀健次粉丝站前端原型 / 当前方向：更适合小炭火的照片型首页。</p>
     </footer>
     <script src="script.js"></script>
   </body>

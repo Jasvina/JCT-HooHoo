@@ -4,28 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>作品宇宙 | 檀健次</title>
-    <meta
-      name="description"
-      content="非官方概念站中的作品宇宙页面：影视、舞台、音乐、专题内容的前端展示结构。"
-    />
-    <meta name="theme-color" content="#0b0f17" />
+    <meta name="description" content="檀健次粉丝向概念站中的作品页：海报墙式布局、档案式分组和更适合收藏观看的页面结构。" />
+    <meta name="theme-color" content="#f6efe5" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-page="works">
-    <div class="site-bg"></div>
-    <header class="site-header">
+    <div class="site-bg fan-bg"></div>
+    <header class="site-header fan-header">
       <a class="brand" href="index.html" aria-label="返回首页">
-        <span class="brand-mark">T</span>
+        <span class="brand-mark">炭</span>
         <span class="brand-copy">
           <strong>檀健次</strong>
-          <em>Aurora Stage</em>
+          <em>黄海小炭火</em>
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">
@@ -35,74 +29,69 @@
       <nav class="site-nav" aria-label="主导航">
         <a href="index.html">首页</a>
         <a href="works.html" aria-current="page">作品宇宙</a>
-        <a href="stage.html">舞台叙事</a>
-        <a href="club.html">粉丝俱乐部</a>
+        <a href="stage.html">舞台高光</a>
+        <a href="club.html">小炭火入口</a>
       </nav>
-      <a class="ghost-link" href="club.html#launch">预约上线</a>
+      <a class="ghost-link fan-link" href="club.html">看互动页</a>
     </header>
 
     <main class="page-shell">
-      <section class="page-hero panel reveal">
-        <p class="eyebrow">Works Universe</p>
-        <h1>把作品做成可以被浏览、被回看、被沉浸进入的章节系统。</h1>
-        <p class="hero-text narrow">
-          当前页面展示的是内容架构方式：以后可以替换成真实封面、真实剧照、真实视频链接，也能直接对接后台动态更新。
-        </p>
+      <section class="page-intro reveal">
+        <p class="eyebrow soft-eyebrow">Works Archive</p>
+        <h1>作品页应该像一面会让粉丝慢慢逛的海报墙，而不是只剩文字分类。</h1>
+        <p class="hero-text fan-copy">这一页先给出更适合粉丝站的作品排版方式：用海报感图片、大标题和短注释把“我想点进去看”做出来。</p>
       </section>
 
-      <section class="bento-grid reveal">
-        <article class="bento-card major-card">
-          <span class="entry-tag">Featured Narrative</span>
-          <h3>主推专题位</h3>
-          <p>适合放新剧、封面、舞台或年度企划。支持做成长图文专题入口。</p>
+      <section class="hero-strip reveal">
+        <article class="hero-strip-card">
+          <span class="mini-label">最近可主推</span>
+          <h3>新剧 / 新角色</h3>
+          <p>首页第一屏主打角色图，作品页承接更多信息。</p>
         </article>
-        <article class="bento-card">
-          <span class="entry-tag">Film & TV</span>
-          <h3>影视章节</h3>
-          <p>按角色、年份或项目进行归档，便于做作品档案页。</p>
+        <article class="hero-strip-card">
+          <span class="mini-label">适合归档</span>
+          <h3>杂志 / 采访 / 片场</h3>
+          <p>用图册式结构，而不是普通文章列表。</p>
         </article>
-        <article class="bento-card">
-          <span class="entry-tag">Music</span>
-          <h3>音乐与声线</h3>
-          <p>适合单曲、live、翻唱或 OST 的独立内容流。</p>
-        </article>
-        <article class="bento-card">
-          <span class="entry-tag">Stage</span>
-          <h3>舞台现场</h3>
-          <p>适合结合动线和灯光感排版，做成更强视觉冲击的页面。</p>
-        </article>
-        <article class="bento-card">
-          <span class="entry-tag">Interview</span>
-          <h3>访谈与杂志</h3>
-          <p>做成编辑部风格排版，会比普通新闻列表更有辨识度。</p>
+        <article class="hero-strip-card">
+          <span class="mini-label">适合扩展</span>
+          <h3>作品详情模板</h3>
+          <p>后面可以继续做成多级详情页与人物标签页。</p>
         </article>
       </section>
 
-      <section class="timeline-shell reveal">
+      <section class="poster-cluster reveal">
         <div class="section-heading">
-          <p class="eyebrow">Archive Logic</p>
-          <h2>内容不只是列表，而是具备回看价值的档案系统。</h2>
+          <p class="eyebrow soft-eyebrow">Poster Layout</p>
+          <h2>先让视觉吸引人，再让内容留住人。</h2>
         </div>
-        <div class="timeline-list">
-          <article class="timeline-item wide-item">
-            <span class="timeline-year">Primary</span>
-            <p>本周主推：重点作品、专题入口、热度内容。</p>
+        <div class="poster-grid">
+          <article class="poster-card large-card tilt-card">
+            <img src="assets/images/tan-jianci-smile.jpg" alt="檀健次照片近景" />
           </article>
-          <article class="timeline-item wide-item">
-            <span class="timeline-year">Secondary</span>
-            <p>精选内容：作品故事、拍摄花絮、舞台回顾。</p>
+          <article class="card-soft poster-note">
+            <span class="mini-label">推荐块 01</span>
+            <h3>影视角色归档</h3>
+            <p>按角色气质、海报、剧照和片段组织，比按���份表格更适合粉丝浏览。</p>
           </article>
-          <article class="timeline-item wide-item">
-            <span class="timeline-year">Long-tail</span>
-            <p>长期归档：旧项目、历史采访、专题回放、媒体合集。</p>
+          <article class="poster-card tilt-card">
+            <img src="assets/images/tan-jianci-racket.jpg" alt="檀健次持球拍照片" />
+          </article>
+          <article class="card-soft poster-note">
+            <span class="mini-label">推荐块 02</span>
+            <h3>舞台 / 音乐 / LIVE</h3>
+            <p>可以拆出单独舞台章节，让高光时刻更容易被收藏和转发。</p>
+          </article>
+          <article class="card-soft poster-note">
+            <span class="mini-label">推荐块 03</span>
+            <h3>采访与杂志封面</h3>
+            <p>做成杂志排版风格，而不是一串普通外链。</p>
           </article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>作品页原型强调内容架构，未来可接入真实作品数据。</p>
-    </footer>
+    <footer class="site-footer"><p>作品宇宙页当前已切到小炭火黄海配色；若拿到谢却山官方剧照，可直接把这里升级成角色专题墙。</p></footer>
     <script src="script.js"></script>
   </body>
 </html>
