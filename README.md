@@ -34,3 +34,5 @@ Current photos in `assets/images/` are from Wikimedia Commons and should retain 
 
 - `tan-jianci-smile.jpg` - China News Service / 中国新闻社, via Wikimedia Commons, CC BY 3.0
 - `tan-jianci-racket.jpg` - China News Service / 中国新闻社, via Wikimedia Commons, CC BY 3.0
+
+- `assets/derived/*` - local crops derived from the licensed source images above; retain original attribution and indicate modifications when publishing

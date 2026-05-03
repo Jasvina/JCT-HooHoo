@@ -33,6 +33,7 @@ jobs:
           mkdir -p _site/assets
           cp index.html works.html stage.html club.html styles.css script.js favicon.svg _site/
           cp -R assets/images _site/assets/
+          cp -R assets/derived _site/assets/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
