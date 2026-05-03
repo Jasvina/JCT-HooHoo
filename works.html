@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作品宇宙 | 檀健次</title>
+    <meta
+      name="description"
+      content="非官方概念站中的作品宇宙页面：影视、舞台、音乐、专题内容的前端展示结构。"
+    />
+    <meta name="theme-color" content="#0b0f17" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="works">
+    <div class="site-bg"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="返回首页">
+        <span class="brand-mark">T</span>
+        <span class="brand-copy">
+          <strong>檀健次</strong>
+          <em>Aurora Stage</em>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="works.html" aria-current="page">作品宇宙</a>
+        <a href="stage.html">舞台叙事</a>
+        <a href="club.html">粉丝俱乐部</a>
+      </nav>
+      <a class="ghost-link" href="club.html#launch">预约上线</a>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero panel reveal">
+        <p class="eyebrow">Works Universe</p>
+        <h1>把作品做成可以被浏览、被回看、被沉浸进入的章节系统。</h1>
+        <p class="hero-text narrow">
+          当前页面展示的是内容架构方式：以后可以替换成真实封面、真实剧照、真实视频链接，也能直接对接后台动态更新。
+        </p>
+      </section>
+
+      <section class="bento-grid reveal">
+        <article class="bento-card major-card">
+          <span class="entry-tag">Featured Narrative</span>
+          <h3>主推专题位</h3>
+          <p>适合放新剧、封面、舞台或年度企划。支持做成长图文专题入口。</p>
+        </article>
+        <article class="bento-card">
+          <span class="entry-tag">Film & TV</span>
+          <h3>影视章节</h3>
+          <p>按角色、年份或项目进行归档，便于做作品档案页。</p>
+        </article>
+        <article class="bento-card">
+          <span class="entry-tag">Music</span>
+          <h3>音乐与声线</h3>
+          <p>适合单曲、live、翻唱或 OST 的独立内容流。</p>
+        </article>
+        <article class="bento-card">
+          <span class="entry-tag">Stage</span>
+          <h3>舞台现场</h3>
+          <p>适合结合动线和灯光感排版，做成更强视觉冲击的页面。</p>
+        </article>
+        <article class="bento-card">
+          <span class="entry-tag">Interview</span>
+          <h3>访谈与杂志</h3>
+          <p>做成编辑部风格排版，会比普通新闻列表更有辨识度。</p>
+        </article>
+      </section>
+
+      <section class="timeline-shell reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Archive Logic</p>
+          <h2>内容不只是列表，而是具备回看价值的档案系统。</h2>
+        </div>
+        <div class="timeline-list">
+          <article class="timeline-item wide-item">
+            <span class="timeline-year">Primary</span>
+            <p>本周主推：重点作品、专题入口、热度内容。</p>
+          </article>
+          <article class="timeline-item wide-item">
+            <span class="timeline-year">Secondary</span>
+            <p>精选内容：作品故事、拍摄花絮、舞台回顾。</p>
+          </article>
+          <article class="timeline-item wide-item">
+            <span class="timeline-year">Long-tail</span>
+            <p>长期归档：旧项目、历史采访、专题回放、媒体合集。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>作品页原型强调内容架构，未来可接入真实作品数据。</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

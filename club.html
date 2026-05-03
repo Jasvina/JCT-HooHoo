@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>粉丝俱乐部 | 檀健次</title>
+    <meta
+      name="description"
+      content="非官方概念站中的粉丝俱乐部页面：预约上线、活动报名和未来互动功能的前端原型。"
+    />
+    <meta name="theme-color" content="#0b0f17" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="club">
+    <div class="site-bg"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="返回首页">
+        <span class="brand-mark">T</span>
+        <span class="brand-copy">
+          <strong>檀健次</strong>
+          <em>Aurora Stage</em>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="works.html">作品宇宙</a>
+        <a href="stage.html">舞台叙事</a>
+        <a href="club.html" aria-current="page">粉丝俱乐部</a>
+      </nav>
+      <a class="ghost-link" href="#launch">预约上线</a>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero panel reveal">
+        <p class="eyebrow">Community Prototype</p>
+        <h1>先把粉丝入口设计优雅，再决定哪些功能真的值得做重后台。</h1>
+        <p class="hero-text narrow">
+          当前是纯前端表单壳层，适合先验证风格和信息组织。未来可接 Supabase 或其他后端，变成真实报名、留言和订阅系统。
+        </p>
+      </section>
+
+      <section id="launch" class="form-shell panel reveal">
+        <div class="form-copy">
+          <p class="eyebrow">Launch Queue</p>
+          <h2>预约这个站点的正式版方向。</h2>
+          <p>
+            你后续如果想做成真实站点，这里可以接入邮件订阅、活动报名、留言、会员内容解锁等功能。
+          </p>
+        </div>
+        <form class="prototype-form">
+          <label>
+            <span>你的昵称</span>
+            <input type="text" placeholder="例如：想看舞台页先上线" />
+          </label>
+          <label>
+            <span>你最期待的模块</span>
+            <select>
+              <option>作品档案页</option>
+              <option>舞台视觉页</option>
+              <option>活动报名</option>
+              <option>内容更新订阅</option>
+            </select>
+          </label>
+          <label class="full-span">
+            <span>你希望保留的风格关键词</span>
+            <textarea rows="5" placeholder="例如：高级、克制、电影感、冷色灯光、舞台感、不要太花"></textarea>
+          </label>
+          <button class="button primary" type="button">提交概念偏好</button>
+        </form>
+      </section>
+
+      <section class="stack-grid reveal">
+        <article class="glass-card accent-gold">
+          <span class="card-index">A</span>
+          <h3>轻交互版本</h3>
+          <p>只有预约和订阅，几乎不需要复杂后端，最快能上线。</p>
+        </article>
+        <article class="glass-card accent-teal">
+          <span class="card-index">B</span>
+          <h3>社区增强版本</h3>
+          <p>支持活动表单、媒体投稿、留言墙，适合接 Supabase。</p>
+        </article>
+        <article class="glass-card accent-rose">
+          <span class="card-index">C</span>
+          <h3>完整运营版本</h3>
+          <p>支持后台发布、会员权益、内容管理和活动数据库。</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>粉丝页目前是前端原型；接后端后即可变为真实互动页面。</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

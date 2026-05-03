@@ -1,6 +1,13 @@
 # JCT-HooHoo
 
-A concept homepage prototype for a Tan Jianci themed website.
+A high-style static concept website prototype for a Tan Jianci themed fan / profile site.
+
+## Pages
+
+- `index.html` - homepage and launch blueprint
+- `works.html` - works universe / archive direction
+- `stage.html` - visual narrative / stage direction
+- `club.html` - fan club and future interaction prototype
 
 ## Local preview
 
@@ -8,16 +15,14 @@ A concept homepage prototype for a Tan Jianci themed website.
 python3 -m http.server 4173
 ```
 
-Then visit `http://127.0.0.1:4173`.
+Then open `http://127.0.0.1:4173`.
 
-## Files
+## Deployment
 
-- `index.html` - landing page structure
-- `styles.css` - visual system, layout, responsive styles
-- `script.js` - scroll reveal animation
+This repo includes `.github/workflows/deploy-pages.yml` for GitHub Pages deployment on every push to `main`.
 
-## Next build options
+## Next expansion ideas
 
-- Keep it as a static site and deploy to Vercel / Cloudflare Pages / GitHub Pages
-- Upgrade to Next.js for multi-page routing and better content structure
-- Add Supabase later if you need login, forms, content management, or fan interactions
+- upgrade to Next.js for reusable layouts and richer routing
+- connect Supabase for forms, auth, storage, and content updates
+- replace placeholder modules with real imagery, copy, and project data
