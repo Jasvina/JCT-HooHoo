@@ -52,6 +52,73 @@
         </article>
       </section>
 
+      <section class="club-pulse reveal">
+        <div class="section-heading split-heading fan-heading">
+          <div>
+            <p class="eyebrow soft-eyebrow">Fan Pulse</p>
+            <h2>先把互动做成真的前端体验，再等后面无缝接真实后端。</h2>
+          </div>
+          <p class="section-text fan-copy">这一轮先把留言、投票和氛围感做成“现在就能玩”的本地原型：提交后立刻显示、投票会累计、整个页面会像一个正在发光的小炭火愿望池。</p>
+        </div>
+
+        <div class="pulse-grid">
+          <article class="pulse-card card-soft">
+            <span class="mini-label">当前愿望单</span>
+            <strong class="pulse-number" data-wish-count>0</strong>
+            <p>提交后会立刻进入下方留言墙。</p>
+          </article>
+          <article class="pulse-card card-soft">
+            <span class="mini-label">最想先补</span>
+            <strong class="pulse-copy" data-leading-topic>照片图册</strong>
+            <p>综合大家的留言和投票实时更新。</p>
+          </article>
+          <article class="pulse-card card-soft">
+            <span class="mini-label">最近加入</span>
+            <strong class="pulse-copy" data-latest-fan>等你来写第一条</strong>
+            <p>昵称会显示在这里，像签进收藏册一样。</p>
+          </article>
+        </div>
+
+        <div class="campaign-grid">
+          <article class="campaign-card">
+            <span class="mini-label">应援企划 01</span>
+            <h3>照片图册加更</h3>
+            <p>把授权照片做成更像九宫格和收藏长图的图册版式。</p>
+            <div class="campaign-meta">
+              <span data-vote-count="照片图册">0 票</span>
+              <button class="button secondary vote-button" type="button" data-vote="照片图册">投给它</button>
+            </div>
+          </article>
+          <article class="campaign-card">
+            <span class="mini-label">应援企划 02</span>
+            <h3>作品档案页补完</h3>
+            <p>把作品墙拆成更像角色卡册的入口和档案分层。</p>
+            <div class="campaign-meta">
+              <span data-vote-count="作品档案">0 票</span>
+              <button class="button secondary vote-button" type="button" data-vote="作品档案">投给它</button>
+            </div>
+          </article>
+          <article class="campaign-card">
+            <span class="mini-label">应援企划 03</span>
+            <h3>舞台高光加灯</h3>
+            <p>把舞台页补成截图墙、章节 cue 和更细的追光层次。</p>
+            <div class="campaign-meta">
+              <span data-vote-count="舞台高光页">0 票</span>
+              <button class="button secondary vote-button" type="button" data-vote="舞台高光页">投给它</button>
+            </div>
+          </article>
+          <article class="campaign-card">
+            <span class="mini-label">应援企划 04</span>
+            <h3>留言墙长期开放</h3>
+            <p>后面接上 Supabase 后，这里就能真的收集小炭火的想法。</p>
+            <div class="campaign-meta">
+              <span data-vote-count="留言互动区">0 票</span>
+              <button class="button secondary vote-button" type="button" data-vote="留言互动区">投给它</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="section-frame reveal">
         <div class="section-heading split-heading fan-heading">
           <div>
@@ -64,18 +131,24 @@
 
       <section id="form" class="form-shell reveal">
         <div class="update-panel">
-          <span class="mini-label">留言方向示意</span>
-          <h2>先把互动界面做温柔，再接真实后端。</h2>
-          <p>你刚才的反馈非常对：粉丝站的交互不需要像产品后台，更需要像“愿意留下来写一句话”的地方。</p>
+          <span class="mini-label">现在就能填写</span>
+          <h2>先让小炭火真的可以留下愿望，再把它接到线上留言池。</h2>
+          <p>这一版已经不只是静态示意图了：提交后会实时刷新愿望墙，投票也会累计保存在浏览器里，后续只需要把这层前端接去后端存储即可。</p>
         </div>
-        <form class="prototype-form">
+        <form class="prototype-form" data-club-form>
           <label>
             <span>你的昵称</span>
-            <input type="text" placeholder="例如：今天也在补舞台的炭火" />
+            <input
+              type="text"
+              name="nickname"
+              maxlength="20"
+              required
+              placeholder="例如：今天也在补舞台的炭火"
+            />
           </label>
           <label>
             <span>你最想先补哪一块</span>
-            <select>
+            <select name="topic" required>
               <option>照片图册</option>
               <option>作品档案</option>
               <option>舞台高光页</option>
@@ -84,14 +157,62 @@
           </label>
           <label class="full-span">
             <span>你想对这个站提什么要求</span>
-            <textarea rows="5" placeholder="例如：希望更像收藏夹、少一点冷感、照片再多一些、舞台页更亮一些"></textarea>
+            <textarea
+              rows="5"
+              name="message"
+              minlength="6"
+              maxlength="140"
+              required
+              placeholder="例如：希望更像收藏夹、少一点冷感、照片再多一些、舞台页更亮一些"
+            ></textarea>
           </label>
-          <button class="button primary" type="button">提交你的小炭火愿望单</button>
+          <div class="full-span">
+            <span>今天的心情贴纸</span>
+            <div class="mood-row">
+              <label class="mood-chip">
+                <input type="radio" name="mood" value="想看更多照片" checked />
+                <span>想看更多照片</span>
+              </label>
+              <label class="mood-chip">
+                <input type="radio" name="mood" value="想补舞台名场面" />
+                <span>想补舞台名场面</span>
+              </label>
+              <label class="mood-chip">
+                <input type="radio" name="mood" value="想做角色专题" />
+                <span>想做角色专题</span>
+              </label>
+            </div>
+          </div>
+          <div class="full-span form-actions">
+            <p class="form-note">当前会保存在本机浏览器里，方便先把前端体验跑通；接 Supabase 后可直接改成真实提交。</p>
+            <button class="button primary" type="submit">提交你的小炭火愿望单</button>
+          </div>
+          <p class="form-feedback full-span" data-form-feedback aria-live="polite"></p>
         </form>
+      </section>
+
+      <section class="wish-wall reveal">
+        <div class="section-heading split-heading fan-heading">
+          <div>
+            <p class="eyebrow soft-eyebrow">Wish Wall</p>
+            <h2>把留言墙先点亮，让这个页面像一本正在被一起写满的收藏册。</h2>
+          </div>
+          <p class="section-text fan-copy">下面这块现在已经会跟着提交和投票一起刷新。先做成本地实时原型，后面接后端时就能直接变成真正开放的小炭火互动墙。</p>
+        </div>
+
+        <div class="wall-toolbar" role="toolbar" aria-label="愿望墙筛选">
+          <button class="filter-chip is-active" type="button" data-filter="all">全部</button>
+          <button class="filter-chip" type="button" data-filter="照片图册">照片图册</button>
+          <button class="filter-chip" type="button" data-filter="作品档案">作品档案</button>
+          <button class="filter-chip" type="button" data-filter="舞台高光页">舞台高光页</button>
+          <button class="filter-chip" type="button" data-filter="留言互动区">留言互动区</button>
+        </div>
+
+        <div class="wish-grid" data-wish-grid></div>
       </section>
     </main>
 
-    <footer class="site-footer"><p>小炭火页当前已经切到黄色应援氛围，后续接后端后可以变成真实留言/活动页面。</p></footer>
+    <footer class="site-footer"><p>小炭火页现在已经有本地可用的留言墙和投票原型；后续只要接后端，就能直接升级成真实互动页。</p></footer>
     <script src="script.js"></script>
   </body>
 </html>
